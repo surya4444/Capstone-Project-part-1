@@ -146,7 +146,7 @@ public class AuthController {
         }
         try {
             SignInDTO eshopUser = entityDTOConverter.covertToLoginDTO(signInDTO);
-//            eshopUser.setPassword(decryptedString);
+            eshopUser.setPassword(decryptedString);
             eshopUser.setToken(token);
             responseEntity = ResponseEntity.status(HttpStatus.CREATED).body(eshopUser);
         }catch (Exception e){

@@ -59,7 +59,8 @@ public class UserServiceImpl implements UserService{
     @Override
     public Boolean checkEmail2(String email){
 
-        String regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,7}";
+        String regex = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
